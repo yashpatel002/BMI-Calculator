@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yash Patel">
+
+
+    <title>BMI Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="bmi">
+        <h2>Body Mass Index Calculator</h2>
+        <label for="height">
+            <p class="text">Height in cm</p>
+        </label>
+        <input type="text" id="height" placeholder="Enter your height">
+
+        <label for="weight">
+            <p class="text">Weight in kg</p>
+        </label>
+        <input type="text" id="weight" placeholder="Enter your weight">
+
+        <p id="result"></p>
+        <button id="btn">Calculate</button>
+    </div>
+
+    <div class="chart">
+        <table>
+            <thead>
+                <tr>
+                    <td>BMI</td>
+                    <td>Category</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-column="bmi">less than 18.5</td>
+                    <td data-column="category">Underweight</td>
+                </tr>
+                <tr>
+                    <td data-column="bmi">between 18.5 and 24.9</td>
+                    <td data-column="category">Ideal</td>
+                </tr>
+                <tr>
+                    <td data-column="bmi">between 25 and 29.9</td>
+                    <td data-column="category">Overweight</td>
+                </tr>
+                <tr>
+                    <td data-column="bmi">over 30</td>
+                    <td data-column="category">Obesity</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__title">Yash Patel</p>
+        <div class="footer_social">
+            <a href="https://github.com/yashpatel002" class="footer__icon"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/yash-patel002/" class="footer__icon"> <i class="bx bxl-linkedin"></i></a>
+        </div>
+        <p> &copy; <span id="year"></span> copyright all right reserved </p>
+
+    </footer>
+
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
